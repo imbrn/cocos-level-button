@@ -1,43 +1,23 @@
 Cocos Level Button
 ===
 
-[Cocos2d-x](http://cocos2d-x.org/) component to represent a campaign level button. It can be used to show a list of
-levels in sequence, representing a campaign.
+[Cocos2d-x](http://cocos2d-x.org/) component to represent a campaign level button.
 
 
 ## Features
 
-* Support to three states: available, unvailable, won (available with stars);
+* Two states: available, unvailable.
+
+* Rating stars;
 
 * Custom style;
 
 
 ## How to use
 
-The level button expects some convetions for it to work:
-
-### Default usage
-
-```c++
-// First you need a model to the button
-levelbutton::Model model;
-model.text = "20";
-model.available = true;
-model.solved = true;
-model.rating = levelbutton::Rating::THREE;
-  
-// Create you button using a builder
-auto button = levelbutton::ButtonBuilder(model)
-    .Build();
-
-my_scene->addChild(button);
-```
-
-### Custom usage
-
-The `ButtonBuilder` can be used to create custom style for the `Button`.
-
 ### Resources:
+
+The level button component expects some resources in your path:
 
 #### Images:
 
@@ -57,4 +37,17 @@ The `ButtonBuilder` can be used to create custom style for the `Button`.
 
 *For the button label:*
 
-* fonts/purisa/Purisa-Bold.ttf
+* fonts/levelbutton/font.ttf
+
+## Default usage
+
+```c++
+
+// Create and configure the button.
+auto button = levelbutton::Button::create();
+button->model().set_text("20");
+button->model().set_available(true);
+button->model().set_rating(levelbutton::Rating::TWO);
+
+my_scene->addChild(button);
+```
