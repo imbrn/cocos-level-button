@@ -29,7 +29,7 @@ void ButtonView::InitUnavailableBackground() {
 }
 
 void ButtonView::InitAvailableLabel() {
-  available_label_ = cocos2d::ui::Text::create("", "fonts/levelbutton/font.ttf", 32);
+  available_label_ = cocos2d::ui::Text::create("", "fonts/levelbutton/font.ttf", 28);
   available_label_->setTextColor({0, 0, 0, 255});
   available_label_->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
   available_label_->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
@@ -38,7 +38,7 @@ void ButtonView::InitAvailableLabel() {
 }
 
 void ButtonView::InitUnavailableLabel() {
-  unavailable_label_ = cocos2d::ui::Text::create("", "fonts/levelbutton/font.ttf", 32);
+  unavailable_label_ = cocos2d::ui::Text::create("", "fonts/levelbutton/font.ttf", 28);
   unavailable_label_->setTextColor({200, 200, 200, 255});
   unavailable_label_->setTextHorizontalAlignment(cocos2d::TextHAlignment::CENTER);
   unavailable_label_->setTextVerticalAlignment(cocos2d::TextVAlignment::CENTER);
